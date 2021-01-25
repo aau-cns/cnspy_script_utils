@@ -21,6 +21,16 @@ import os
 
 
 def get_list_of_dir(directory):
+    """
+    returns a list of folders  within the `directory`
+
+    Input:
+    directory -- string
+
+    Output:
+    dir_list   -- list
+    """
+
     directory = os.path.abspath(directory)
     l = os.listdir(directory)
     dir_list = []
@@ -33,6 +43,16 @@ def get_list_of_dir(directory):
 
 
 def get_list_of_files(directory):
+    """
+    returns a list of files within the `directory`
+
+    Input:
+    directory -- string
+
+    Output:
+    file_list   -- list
+    """
+
     directory = os.path.abspath(directory)
     l = os.listdir(directory)
     file_list = []
@@ -42,3 +62,28 @@ def get_list_of_files(directory):
             file_list.append(e)
 
     return file_list
+
+
+########################################################################################################################
+#################################################### T E S T ###########################################################
+########################################################################################################################
+import unittest
+import time
+import csv
+from csv2dataframe.TimestampCSV2DataFrame import TimestampCSV2DataFrame
+
+
+class DirectoryInfo_Test(unittest.TestCase):
+    def test_get_list_of_dir(self):
+        list = get_list_of_dir(directory="./sample_data")
+        self.assertTrue(len(list) == 2)
+        print('got: ' + str(list))
+
+    def test_get_list_of_files(self):
+        list = get_list_of_files(directory="./sample_data/dir1/sub_dir1")
+        self.assertTrue(len(list) == 2)
+        print('got: ' + str(list))
+
+
+if __name__ == "__main__":
+    unittest.main()
