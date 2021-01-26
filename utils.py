@@ -17,7 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 # Requirements:
-# pandas, ros_csv_formats, rosbag2csv, script_utils, trajectory_evaluation
+# pandas, spatial_csv_formats, rosbag2csv, script_utils, trajectory_evaluation
 ########################################################################################################################
 import sys
 
