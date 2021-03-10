@@ -9,6 +9,15 @@ Most important functions:
 1. [string_to_list(string, pattern)](./string_parser.py)
 1. [string_to_dict(string, pattern)](./string_parser.py)
 
+## Installation
+
+Install the current code base from GitHub and pip install a link to that cloned copy
+```
+git clone https://gitlab.aau.at/aau-cns/py3_pkgs/script_utils.git
+cd csv2dataframe
+pip install -e .
+```
+
 ## Dependencies
 
 * [re]()
