@@ -72,35 +72,3 @@ def string_to_dict(string, pattern):
     return _dict
 
 
-########################################################################################################################
-#################################################### T E S T ###########################################################
-########################################################################################################################
-import unittest
-import time
-import csv
-from csv2dataframe.TimestampCSV2DataFrame import TimestampCSV2DataFrame
-
-
-class StringParser_Test(unittest.TestCase):
-    def test_string_to_list(self):
-        name = 'ATTR_12_LVL_2_RUN_4_EST_5.bag'
-        p = 'ATTR_{0}_LVL_{1}_RUN_{2}_EST_{3}.bag'
-        l = string_to_list(string=name, pattern=p)
-        print('got: ' + str(l))
-
-        self.assertTrue(l[0] == '12')
-        self.assertTrue(l[1] == '2')
-        self.assertTrue(l[2] == '4')
-        self.assertTrue(l[3] == '5')
-
-    def test_string_to_dict(self):
-        p = 'ATTR_{attrnum}_LVL_{lvlnum}_RUN_{runnum}_EST_{estnum}.bag'
-        s = p.format(attrnum=1, lvlnum=2, runnum=3, estnum=4)
-        d = string_to_dict(string=s, pattern=p)
-
-        print('got: ' + str(d), ' for: [' + s + ']')
-        self.assertTrue(d['attrnum'] == '1')
-
-
-if __name__ == "__main__":
-    unittest.main()

@@ -17,50 +17,23 @@
 #
 # Requirements:
 ########################################################################################################################
-import os
+import unittest
+import time
+import csv
+from csv2dataframe.TimestampCSV2DataFrame import TimestampCSV2DataFrame
+from script_utils.directory_info import *
+
+class DirectoryInfo_Test(unittest.TestCase):
+    def test_get_list_of_dir(self):
+        list = get_list_of_dir(directory="./sample_data")
+        self.assertTrue(len(list) == 2)
+        print('got: ' + str(list))
+
+    def test_get_list_of_files(self):
+        list = get_list_of_files(directory="./sample_data/dir1/sub_dir1")
+        self.assertTrue(len(list) == 2)
+        print('got: ' + str(list))
 
 
-def get_list_of_dir(directory):
-    """
-    returns a list of folders  within the `directory`
-
-    Input:
-    directory -- string
-
-    Output:
-    dir_list   -- list
-    """
-
-    directory = os.path.abspath(directory)
-    l = os.listdir(directory)
-    dir_list = []
-    for e in l:
-        e = os.path.abspath(os.path.join(directory, e))
-        if os.path.isdir(e):
-            dir_list.append(e)
-
-    return dir_list
-
-
-def get_list_of_files(directory):
-    """
-    returns a list of files within the `directory`
-
-    Input:
-    directory -- string
-
-    Output:
-    file_list   -- list
-    """
-
-    directory = os.path.abspath(directory)
-    l = os.listdir(directory)
-    file_list = []
-    for e in l:
-        e = os.path.abspath(os.path.join(directory, e))
-        if os.path.isfile(e):
-            file_list.append(e)
-
-    return file_list
-
-
+if __name__ == "__main__":
+    unittest.main()
