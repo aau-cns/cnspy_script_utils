@@ -18,7 +18,7 @@ setup(
     version=release,
     author='Roland Jung',
     author_email='roland.jung@aau.at',    
-    description='ROS1 rosbag to CSV file converter and vice versa.',
+    description='Utilty scripts and functions.',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://gitlab.aau.at/aau-cns/py3_pkgs/script_utils/',
@@ -33,5 +33,5 @@ setup(
     
     packages=find_packages(exclude=["test_*", "TODO*"]),
     python_requires='>=3.6',
-    install_requires=['numpy', 'tqdm', 'pandas', 'argparse', 'PyYAML', 'spatialmath-python', 'rospy', 'rospkg', 'pycryptodomex', 'pycryptodome', 'gnupg', 'lz4', 'script_utils', 'spatial_csv_formats'],
+    install_requires=[],
 )

@@ -16,8 +16,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
-# Requirements:
-# pandas, spatial_csv_formats, rosbag2csv, script_utils, trajectory_evaluation
 ########################################################################################################################
 import sys
 
