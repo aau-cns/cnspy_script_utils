@@ -17,20 +17,24 @@
 #
 # Requirements:
 ########################################################################################################################
+import os
 import unittest
 import time
 import csv
 from csv2dataframe.TimestampCSV2DataFrame import TimestampCSV2DataFrame
 from script_utils.directory_info import *
 
+SAMPLE_DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sample_data')
+
+
 class DirectoryInfo_Test(unittest.TestCase):
     def test_get_list_of_dir(self):
-        list = get_list_of_dir(directory="./sample_data")
+        list = get_list_of_dir(directory=SAMPLE_DATA_DIR)
         self.assertTrue(len(list) == 2)
         print('got: ' + str(list))
 
     def test_get_list_of_files(self):
-        list = get_list_of_files(directory="./sample_data/dir1/sub_dir1")
+        list = get_list_of_files(directory=str(SAMPLE_DATA_DIR + '/dir1/sub_dir1'))
         self.assertTrue(len(list) == 2)
         print('got: ' + str(list))
 
