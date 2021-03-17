@@ -1,4 +1,4 @@
-# script utils
+# cnspy_script_utils
 
 A package holding useful scripts, that cannot be associated to any other (dangling code, that is used in different places). 
 

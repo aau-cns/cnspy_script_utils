@@ -20,8 +20,8 @@
 import unittest
 import time
 import csv
-from csv2dataframe.TimestampCSV2DataFrame import TimestampCSV2DataFrame
-from script_utils.string_parser import *
+from cnspy_csv2dataframe.TimestampCSV2DataFrame import TimestampCSV2DataFrame
+from cnspy_script_utils.string_parser import *
 
 class StringParser_Test(unittest.TestCase):
     def test_string_to_list(self):

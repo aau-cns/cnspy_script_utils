@@ -21,8 +21,8 @@ import os
 import unittest
 import time
 import csv
-from csv2dataframe.TimestampCSV2DataFrame import TimestampCSV2DataFrame
-from script_utils.directory_info import *
+from cnspy_csv2dataframe.TimestampCSV2DataFrame import TimestampCSV2DataFrame
+from cnspy_script_utils.directory_info import *
 
 SAMPLE_DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sample_data')
 
