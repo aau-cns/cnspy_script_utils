@@ -13,12 +13,14 @@ Most important functions:
 
 Install the current code base from GitHub and pip install a link to that cloned copy
 ```
-git clone https://gitlab.aau.at/aau-cns/py3_pkgs/script_utils.git
-cd csv2dataframe
+git clone https://gitlab.aau.at/aau-cns/py3_pkgs/cnspy_script_utils.git
+cd cnspy_script_utils
 pip install -e .
 ```
 
 ## Dependencies
+
+It is part of the [cnspy eco-system](https://gitlab.aau.at/aau-cns/py3_pkgs) of the [cns-github]() group.  
 
 * [re]()
 * [sys]()
