@@ -17,6 +17,10 @@ git clone https://github.com/aau-cns/cnspy_script_utils.git
 cd cnspy_script_utils
 pip install -e .
 ```
+or the [official package](https://pypi.org/project/cnspy-script-utils/) via
+```commandline
+pip install cnspy-script-utils
+```
 
 ## Dependencies
 
